@@ -29,33 +29,34 @@ if (typeof userCap === 'string') {
 
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
-function playRound(userCap,ComChoiceCaps) {
+function playRound(playerSelection,computerSelection) {
 
 
-  if (userCap === ComChoiceCaps) {
+  if (playerSelection === computerSelection) {
     alert ("The result is a tie!");
-  } else if (userCap === "ROCK") {
-    if (ComChoiceCaps === "SCISSORS") {
+  } else if (playerSelection == "ROCK") {
+    if (computerSelection == "SCISSORS") {
       alert ("rock wins");
     } else {
       alert ("paper wins");
     }
-  } else if (userCap === "PAPER") {
-    if (comChoiceCaps === "ROCK") {
+  } else if (playerSelection == "PAPER") {
+    if (computerSelection == "ROCK") {
       alert ("paper wins");
     } else {
       alert ("scissors wins");
     }
-  } else if (userCap === "SCISSORS") {
-    if (ComChoiceCaps === "PAPER") {
+  } else if (playerSelection == "SCISSORS") {
+    if (computerSelection == "PAPER") {
       alert ("scissors wins");
     } else {
       alert ("rock wins");
     }
   }
 }
-
-playRound("ROCK","PAPER");
+userInput();
+getComputerChoice();
+playRound(userCap, ComChoiceCaps);
 
 
 //make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
