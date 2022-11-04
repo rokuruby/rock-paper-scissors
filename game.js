@@ -11,19 +11,19 @@
 
   var userType = prompt("Please type/enter Rock, Paper or Scissors");
   let userCap = userType.toUpperCase();
-    if (userCap === "ROCK" || userCap === "PAPER" || userCap === "SCISSORS") {
-    alert("Valid input");
-    } else {
-    alert("Invalid input");
-    }
-console.log("User = " + userCap);
+
+    if (userCap !== "ROCK" && userCap !== "PAPER" && userCap !== "SCISSORS") {
+    alert("ERROR! Invalid input! . Please type/enter Rock, Paper or Scissors");
+    } 
+   else {
+    console.log("User = " + userCap);
+   }
 
 if (typeof userCap === 'string') {
     console.log('userCap is a string');
   } else {
     console.log('userCap is not a string');
   }
-  
 
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
@@ -31,24 +31,31 @@ function playRound(playerSelection,computerSelection) {
 
 
   if (playerSelection === computerSelection) {
-    alert ("The result is a tie!");
+    alert ("Both of you chose the same thing. The result is a tie! No one wins!");
+    console.log("The result is a tie!");
   } else if (playerSelection == "ROCK") {
     if (computerSelection == "SCISSORS") {
-      alert ("rock wins");
+      alert ("CPU chose Scissors. You chose Rock. YOU WIN!");
+      console.log("rock/player wins");
     } else {
-      alert ("paper wins");
+      alert ("CPU chose Paper. You chose Rock. YOU LOSE!");
+      console.log("paper wins/CPU wins");
     }
   } else if (playerSelection == "PAPER") {
     if (computerSelection == "ROCK") {
-      alert ("paper wins");
+      alert ("CPU chose Rock. You chose Paper.YOU WIN!!!");
+      console.log("paper wins/Player wins");
     } else {
-      alert ("scissors wins");
+      alert ("CPU chose Scissors. You chose Paper. YOU LOSE!!!");
+      console.log("scissors wins/CPU wins");
     }
   } else if (playerSelection == "SCISSORS") {
     if (computerSelection == "PAPER") {
-      alert ("scissors wins");
+      alert ("CPU chose Paper. You chose Scissors. YOU WIN!");
+      console.log("scissors wins/Player wins");
     } else {
-      alert ("rock wins");
+      alert ("CPU chose Rock. You chose Scissors. YOU LOSE!");
+      console.log("rock wins/CPU wins");
     }
   }
 }
