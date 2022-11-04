@@ -7,7 +7,6 @@ function getComputerChoice() {
     console.log("CPU = " + ComChoiceCaps);
     
 }
-getComputerChoice();
 
 //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
 function userInput() {
@@ -27,11 +26,13 @@ if (typeof userCap === 'string') {
   }
   
 }
-userInput();
 
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
 function playRound(userCap,ComChoiceCaps) {
+  userInput();
+  getComputerChoice();
+
   if (userCap === ComChoiceCaps) {
     return "The result is a tie!";
   } else if (userCap === "ROCK") {
@@ -54,6 +55,7 @@ function playRound(userCap,ComChoiceCaps) {
     }
   }
 }
+playRound(userCap,ComChoiceCaps);
 
 //make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
 //the game() function ,at the end of the loop report who is the overall winner by comparing the scores..
