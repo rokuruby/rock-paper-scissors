@@ -1,4 +1,5 @@
 //Generates random computer choice and process it as all caps and as a string and stores it in ComChoice
+function activateScript() {
 
     const Choices = ["Rock","Paper","Scissors"];
     const random = Math.floor(Math.random() * Choices.length);
@@ -28,8 +29,6 @@ if (typeof userCap === 'string') {
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
 function playRound(playerSelection,computerSelection) {
-
-
   if (playerSelection === computerSelection) {
     alert ("Both of you chose the same thing. The result is a tie! No one wins!");
     console.log("The result is a tie!");
@@ -62,6 +61,10 @@ function playRound(playerSelection,computerSelection) {
 
 playRound(userCap,ComChoiceCaps);
 
-
 //make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
+
 //the game() function ,at the end of the loop report who is the overall winner by comparing the scores..
+
+}
+
+
