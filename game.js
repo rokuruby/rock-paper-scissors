@@ -31,23 +31,23 @@ userInput();
 
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
-function playRound(userChoice, comChoice) {
-  if (userChoice === comChoice) {
+function playRound(userCap,ComChoiceCaps) {
+  if (userCap === ComChoiceCaps) {
     return "The result is a tie!";
-  } else if (userChoice === "rock") {
-    if (comChoice === "scissors") {
+  } else if (userCap === "ROCK") {
+    if (ComChoiceCaps === "SCISSORS") {
       return "rock wins";
     } else {
       return "paper wins";
     }
-  } else if (userChoice === "paper") {
-    if (comChoice === "rock") {
+  } else if (userCap === "PAPER") {
+    if (comChoiceCaps === "ROCK") {
       return "paper wins";
     } else {
       return "scissors wins";
     }
-  } else if (userChoice === "scissors") {
-    if (comChoice === "paper") {
+  } else if (userCap === "SCISSORS") {
+    if (ComChoiceCaps === "PAPER") {
       return "scissors wins";
     } else {
       return "rock wins";
