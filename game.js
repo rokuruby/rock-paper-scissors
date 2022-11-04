@@ -1,15 +1,14 @@
 //Generates random computer choice and process it as all caps and as a string and stores it in ComChoice
-function getComputerChoice() {
+
     const Choices = ["Rock","Paper","Scissors"];
     const random = Math.floor(Math.random() * Choices.length);
     let ComChoice = Choices[random];
     let ComChoiceCaps = ComChoice.toUpperCase();
     console.log("CPU = " + ComChoiceCaps);
     
-}
 
 //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
-function userInput() {
+
   var userType = prompt("Please type/enter Rock, Paper or Scissors");
   let userCap = userType.toUpperCase();
     if (userCap === "ROCK" || userCap === "PAPER" || userCap === "SCISSORS") {
@@ -25,7 +24,6 @@ if (typeof userCap === 'string') {
     console.log('userCap is not a string');
   }
   
-}
 
 //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
 
@@ -54,9 +52,8 @@ function playRound(playerSelection,computerSelection) {
     }
   }
 }
-userInput();
-getComputerChoice();
-playRound(userCap, ComChoiceCaps);
+
+playRound(userCap,ComChoiceCaps);
 
 
 //make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
