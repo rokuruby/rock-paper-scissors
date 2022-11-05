@@ -1,6 +1,6 @@
 //Generates random computer choice and process it as all caps and as a string and stores it in ComChoice
 function activateScript() {
-
+  for (let i = 0; i<6; i++) {
     const Choices = ["Rock","Paper","Scissors"];
     const random = Math.floor(Math.random() * Choices.length);
     let ComChoice = Choices[random];
@@ -60,6 +60,8 @@ function playRound(playerSelection,computerSelection) {
 }
 
 playRound(userCap,ComChoiceCaps);
+console.log(i);
+}
 
 //make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
 
