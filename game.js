@@ -13,6 +13,7 @@ function activateScript() {
 //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
 
   var userType = prompt("Please type/enter Rock, Paper or Scissors");
+  //future note: change it from a typing prompt to a radio multichoice selection that returns a string to the var userType.
   let userCap = userType.toUpperCase();
 
     if (userCap !== "ROCK" && userCap !== "PAPER" && userCap !== "SCISSORS") {
