@@ -79,12 +79,18 @@ console.log(i);
 document.getElementById("playerscore").innerHTML = userScore;
 document.getElementById("cpuscore").innerHTML = cpuScore;
 
-}
 
-
-
-//the game() function ,at the end of the loop report who is the overall winner by comparing the scores..
 
 }
+//at the end of the loop report who is the overall winner by comparing the scores..
+if (userScore > cpuScore) {
+  alert("YOU WIN OVERALL!! CONGRATULATIONS!");
+} else if(userScore == cpuScore){
+  alert("Woah a Draw!!")
+} else alert( "SORRY YOU LOSE OVERALL!");
 
+userScore = 0
+cpuScore = 0
+
+}
 
