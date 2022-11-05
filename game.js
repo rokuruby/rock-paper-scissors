@@ -61,9 +61,13 @@ function playRound(playerSelection,computerSelection) {
 
 playRound(userCap,ComChoiceCaps);
 console.log(i);
+
+//statement/function updating the CPU and player score.
+
+
 }
 
-//make a new game() function that calls playRound() function and loops it for 5 times each time each time reporting and updating the CPU and player score
+
 
 //the game() function ,at the end of the loop report who is the overall winner by comparing the scores..
 
