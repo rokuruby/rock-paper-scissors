@@ -67,6 +67,25 @@ document.getElementById("cpuscore").innerHTML = cpuScore;
 document.getElementById("playerchoice").innerHTML = userCap;
 document.getElementById("cpuchoice").innerHTML = ComChoiceCaps;
 
+//if statement to check if player or CPU reach 5 points first and to prompt the player about the overall results and who won.
+//also resets the game counter for a new game automatically
+
+if (userScore == 5) {
+  alert ("YOU WIN OVERALL! CONGRATULATIONS!! Do Play Again!")
+  userScore = 0;
+  cpuScore = 0;
+  document.getElementById("playerscore").innerHTML = userScore;
+  document.getElementById("cpuscore").innerHTML = cpuScore;
+} else if (cpuScore == 5) {
+  alert ("Too Bad!! You LOSE!")
+  userScore = 0;
+  cpuScore = 0;
+  document.getElementById("playerscore").innerHTML = userScore;
+  document.getElementById("cpuscore").innerHTML = cpuScore;
+}
+
+
+
 }
 
 /*
