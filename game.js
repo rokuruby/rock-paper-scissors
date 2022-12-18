@@ -62,10 +62,13 @@ function cpuWin() {
  }
 
 console.log("PlayerScore " + userScore + " CPUSCORE " + cpuScore);
-console.log(i);
 document.getElementById("playerscore").innerHTML = userScore;
 document.getElementById("cpuscore").innerHTML = cpuScore;
+document.getElementById("playerchoice").innerHTML = userCap;
+document.getElementById("cpuchoice").innerHTML = ComChoiceCaps;
+
 }
+
 /*
 //at the end of the loop report who is the overall winner by comparing the scores..
 if (userScore > cpuScore) {
@@ -79,3 +82,9 @@ cpuScore = 0
 */
 }
 
+function resetScore() {
+  userScore = 0;
+  cpuScore = 0;
+  document.getElementById("playerscore").innerHTML = userScore;
+  document.getElementById("cpuscore").innerHTML = cpuScore;
+}
