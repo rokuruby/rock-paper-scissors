@@ -6,15 +6,26 @@
 </head>
 <body>
 <h1>Tiong's Rock Paper Scissors Game!</h1>
-<h2> 1 Game = Play For 5 Rounds! Come Join The Fun!</h2>
-<input type="button" onclick="activateScript()" value="Play the GAME" />
+<h2> Choose and click any to startbutton  playing!!</h2>
+<input type="button" onclick="activateScript('ROCK')" value="Rock, I choose You!!" />
+<input type="button" onclick="activateScript('PAPER')" value="Paper, I choose You!!" />
+<input type="button" onclick="activateScript('SCISSORS')" value="Scissors, I choose You!!" />
 
 <script type="text/javascript" src="/rock-paper-scissors/game.js"></script>
 
 </body>
+<div>
+  <h3>YOU Chose</h3>
+  <p>placeholder</p>
+</div>
+<div>
+  <h3>CPU Chose</h3>
+  <p>placeholder</p>
+</div>
 
 
-<h2>THE Previous SCORE</h2>
+
+<h2>Current SCORE</h2>
 Player Score
 <p id="playerscore">0</p>
 

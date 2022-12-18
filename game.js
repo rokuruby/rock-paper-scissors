@@ -2,25 +2,17 @@
 var cpuScore = 0;
 var userScore = 0;
 
-function activateScript() {
-    const Choices = ["Rock","Paper","Scissors"];
+function activateScript(buttonchoice) {
+    const Choices = ["ROCK","PAPER","SCISSORS"];
     const random = Math.floor(Math.random() * Choices.length);
-    let ComChoice = Choices[random];
-    let ComChoiceCaps = ComChoice.toUpperCase();
+    let ComChoiceCaps = Choices[random];
     console.log("CPU = " + ComChoiceCaps);  
 
 //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
 
-  var userType = prompt("Please type/enter Rock, Paper or Scissors");
-  let userCap = userType.toUpperCase();
-
-    if (userCap !== "ROCK" && userCap !== "PAPER" && userCap !== "SCISSORS") {
-    alert("ERROR! Invalid input! . Please type/enter Rock, Paper or Scissors");
-    } 
-   else {
+  var userCap = buttonchoice;
     console.log("Player = " + userCap);
-   }
-
+   
 playRound(userCap,ComChoiceCaps);
 
 function playRound(playerSelection,computerSelection) {
