@@ -87,7 +87,7 @@ setTimeout(function(){if (userScore == 5) {
 }, 100);
 
 }
-//future notes, maybe have another section and function to save and remember the previous 5 round winner.
+//future notes, maybe have another section and function to save and remember the previous 5 round winner and scores.
 }
 
 function resetScore() {
