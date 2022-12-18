@@ -3,18 +3,16 @@ var cpuScore = 0;
 var userScore = 0;
 
 function activateScript() {
-  //for (let i = 0; i<5; i++) {
     const Choices = ["Rock","Paper","Scissors"];
     const random = Math.floor(Math.random() * Choices.length);
     let ComChoice = Choices[random];
     let ComChoiceCaps = ComChoice.toUpperCase();
     console.log("CPU = " + ComChoiceCaps);  
 
-    //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
+//prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
 
-    var userType = prompt("Please type/enter Rock, Paper or Scissors");
-    //future note: change it from a typing prompt to a radio multichoice selection that returns a string to the var userType.
-    let userCap = userType.toUpperCase();
+  var userType = prompt("Please type/enter Rock, Paper or Scissors");
+  let userCap = userType.toUpperCase();
 
     if (userCap !== "ROCK" && userCap !== "PAPER" && userCap !== "SCISSORS") {
     alert("ERROR! Invalid input! . Please type/enter Rock, Paper or Scissors");
@@ -23,13 +21,13 @@ function activateScript() {
     console.log("Player = " + userCap);
    }
 
-    //write a playRound() function that uses to compare UserChoice against ComChoice. one by one and store the result and CPU & player score into variables
+playRound(userCap,ComChoiceCaps);
 
-    function playRound(playerSelection,computerSelection) {
-    if (playerSelection === computerSelection) {
+function playRound(playerSelection,computerSelection) {
+  if (playerSelection === computerSelection) {
     alert ("Both of you chose the same thing. The result is a tie! No one wins!");
     console.log("The result is a tie!");
-    } else if (playerSelection == "ROCK") {
+  } else if (playerSelection == "ROCK") {
     if (computerSelection == "SCISSORS") {
       alert ("CPU chose Scissors. You chose Rock. YOU WIN!");
       console.log("rock/player wins");
@@ -40,7 +38,7 @@ function activateScript() {
       console.log("paper wins/CPU wins");
       cpuWin();
     }
-    } else if (playerSelection == "PAPER") {
+  } else if (playerSelection == "PAPER") {
     if (computerSelection == "ROCK") {
       alert ("CPU chose Rock. You chose Paper.YOU WIN!!!");
       console.log("paper wins/Player wins");
@@ -50,7 +48,7 @@ function activateScript() {
       console.log("scissors wins/CPU wins");
       cpuWin();
     }
-    } else if (playerSelection == "SCISSORS") {
+  } else if (playerSelection == "SCISSORS") {
     if (computerSelection == "PAPER") {
       alert ("CPU chose Paper. You chose Scissors. YOU WIN!");
       console.log("scissors wins/Player wins");
@@ -60,10 +58,7 @@ function activateScript() {
       console.log("rock wins/CPU wins");
       cpuWin();
     }
-  //}
-}
-
-playRound(userCap,ComChoiceCaps);
+  }
 
 //statement/function updating the CPU and player score.
 function userWin() {
@@ -78,10 +73,8 @@ console.log("PlayerScore " + userScore + " CPUSCORE " + cpuScore);
 console.log(i);
 document.getElementById("playerscore").innerHTML = userScore;
 document.getElementById("cpuscore").innerHTML = cpuScore;
-
-
-
 }
+/*
 //at the end of the loop report who is the overall winner by comparing the scores..
 if (userScore > cpuScore) {
   alert("YOU WIN OVERALL!! CONGRATULATIONS!");
@@ -91,6 +84,6 @@ if (userScore > cpuScore) {
 
 userScore = 0
 cpuScore = 0
-
+*/
 }
 
