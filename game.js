@@ -8,6 +8,7 @@ function activateScript(buttonchoice) {
     let ComChoiceCaps = Choices[random];
     console.log("CPU = " + ComChoiceCaps);  
 
+
 //prompt() for user to input a variable that is stored as UserCap and process it as all caps as a string
 
   var userCap = buttonchoice;
@@ -69,8 +70,8 @@ document.getElementById("cpuchoice").innerHTML = ComChoiceCaps;
 
 //if statement to check if player or CPU reach 5 points first and to prompt the player about the overall results and who won.
 //also resets the game counter for a new game automatically
-
-if (userScore == 5) {
+//also delays executing the code for abit to update the game counter before resetting it.
+setTimeout(function(){if (userScore == 5) {
   alert ("YOU WIN OVERALL! CONGRATULATIONS!! Do Play Again!")
   userScore = 0;
   cpuScore = 0;
@@ -83,22 +84,10 @@ if (userScore == 5) {
   document.getElementById("playerscore").innerHTML = userScore;
   document.getElementById("cpuscore").innerHTML = cpuScore;
 }
-
-
+}, 100);
 
 }
-
-/*
-//at the end of the loop report who is the overall winner by comparing the scores..
-if (userScore > cpuScore) {
-  alert("YOU WIN OVERALL!! CONGRATULATIONS!");
-} else if(userScore == cpuScore){
-  alert("Woah a Draw!!")
-} else alert( "SORRY YOU LOSE OVERALL!");
-
-userScore = 0
-cpuScore = 0
-*/
+//future notes, maybe have another section and function to save and remember the previous 5 round winner.
 }
 
 function resetScore() {
